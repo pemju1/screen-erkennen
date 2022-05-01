@@ -41,7 +41,7 @@ for i in range(50):
         current_screen.append(255)
 
 
-reset_button_image = py.Surface([7*grid_size, 3*grid_size])
+reset_button_image = py.Surface([7*grid_size, 3*grid_size])     #erzeugt leere Leinwand
 reset_button_image.fill((40, 125, 94))
 reset_button_rect = reset_button_image.get_rect(topleft=(1*grid_size, 51*grid_size))
 screen.blit(reset_button_image, reset_button_rect)
@@ -51,7 +51,7 @@ reset_text_surf = py.transform.scale(reset_text_surf, (7*grid_size, 3*grid_size)
 reset_text_rect = reset_text_surf.get_rect(topleft = (1*grid_size+3, 51*grid_size+7))
 screen.blit(reset_text_surf,reset_text_rect)
 
-appendlist_buton_surf = py.Surface([7*grid_size, 3*grid_size])
+appendlist_buton_surf = py.Surface([7*grid_size, 3*grid_size])  #speichert was derzeit zu sehen ist
 appendlist_buton_surf.fill((40, 125, 94))
 appendlist_buton_rect = appendlist_buton_surf.get_rect(topleft=(40*grid_size, 51*grid_size))
 screen.blit(appendlist_buton_surf, appendlist_buton_rect)
@@ -61,7 +61,7 @@ appendlist_text_surf = py.transform.scale(appendlist_text_surf, (7*grid_size, 3*
 appendlist_text_rect = appendlist_text_surf.get_rect(topleft = (40*grid_size+1, 51*grid_size+2))
 screen.blit(appendlist_text_surf,appendlist_text_rect)
 
-read_buton_surf = py.Surface([7*grid_size, 3*grid_size])
+read_buton_surf = py.Surface([7*grid_size, 3*grid_size])        #gibt gespeichertes wieder
 read_buton_surf.fill((40, 125, 94))
 read_buton_rect = read_buton_surf.get_rect(topleft=(20*grid_size, 51*grid_size))
 screen.blit(read_buton_surf, read_buton_rect)
@@ -104,7 +104,7 @@ while True:
                             pixel_group.add(pixel.Pixel(j*grid_size,i*grid_size,int(current_screen[index])))
                             index += 1
 
-        keys = py.key.get_pressed()
+        keys = py.key.get_pressed() 
         if keys[py.K_1] or keys[py.K_2] or keys[py.K_3] or keys[py.K_4] or keys[py.K_5] or keys[py.K_6] or keys[py.K_7] or keys[py.K_8]:
             pixel_group.empty()
             current_screen = []

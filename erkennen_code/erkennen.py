@@ -15,7 +15,7 @@ def add_connecions():
             index += 1
 
 
-def add_scala():
+def add_scala(): 
     j = -6
     for i in range(22):
         scala_group.add(connection.Connection((1.5+i)*grid_size*2,53*grid_size,j,2))
